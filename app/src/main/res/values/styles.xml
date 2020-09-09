@@ -1,0 +1,19 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+
+    <style name="customEdit" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_marginStart">@dimen/margin_start</item>
+        <item name="android:layout_marginTop">@dimen/margin_top</item>
+        <item name="android:layout_marginEnd">@dimen/margin_end</item>
+        <item name="android:background">@drawable/search_bar</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:inputType">textUri</item>
+    </style>
+
+</resources>
