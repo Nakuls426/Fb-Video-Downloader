@@ -14,9 +14,10 @@
             android:id="@+id/progress_Bar"
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-6dp"
             android:indeterminate="true"
-            android:layout_height="5dp"
-            android:padding="0dp"/>
+            android:visibility="gone" />
 
         <EditText
             android:id="@+id/search_bar1"
@@ -24,8 +25,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="@string/app_name"
-            android:fontFamily="sans-serif"
-            android:hint="@string/paste_url" />
+            android:fontFamily="@font/hind"
+            android:hint="@string/paste_url"
+            android:text="@string/default_url"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
     </FrameLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -33,42 +36,61 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/colorAccent"
         android:layout_margin="10dp"
-        android:text="@string/search" />
+        android:backgroundTint="@color/colorAccent"
+        android:fontFamily="@font/hind"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/available_format"
+        android:id="@+id/video_preview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:layout_gravity="center"
-        android:text="@string/video_avail"
+        android:fontFamily="@font/hind"
+        android:text="@string/preview"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textStyle="bold" />
+
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sd_quality_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/sd_format"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/hd_quality_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/hd_format"
+            android:textColor="@color/white" />
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/sd_format"
+        android:id="@+id/login_with_facebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:visibility="gone"
         android:backgroundTint="@color/colorAccent"
-        android:textColor="@color/white"
-        android:gravity="center"
-        android:text="@string/sd_format" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/hd_format"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        android:layout_margin="10dp"
-        android:backgroundTint="@color/colorAccent"
-        android:textColor="@color/white"
-        android:text="@string/hd_format" />
-
+        android:text="@string/login"
+        android:textColor="@color/white" />
 </LinearLayout>
