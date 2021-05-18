@@ -10,4 +10,7 @@
     <string name="video_avail">Video available in two Formats</string>
     <string name="hd_format">High Quality</string>
     <string name="sd_format">Normal Quality</string>
+    <string name="preview">Video Preview</string>
+    <string name="default_url">https://fb.watch/5dhpRJMBdL/</string>
+    <string name="login">Login with facebook</string>
 </resources>
